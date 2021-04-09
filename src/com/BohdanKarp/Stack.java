@@ -1,31 +1,32 @@
 package com.BohdanKarp;
 
-public class Stack<T> extends SinglyLinkedList<T>{
+public class Stack<T> extends SinglyLinkedList<T> {
 
-    public void push(T element){
+    public void push(T element) {
         size++;
         addNode(element);
     }
+
     public T pop() {
-        if(isEmpty()){
+        if (isEmpty()) {
             return null;
-        }
-        else {
-            T element =top.getValue();
-            top= top.getPrev();
+        } else {
+            T element = top.getValue();
+            top = top.getPrev();
             size--;
             return element;
         }
     }
-    public T top(){
-        if(isEmpty()){
+
+    public T top() {
+        if (isEmpty()) {
             return null;
-        }
-        else {
+        } else {
             return top.getValue();
         }
     }
-    public int size(){
+
+    public int size() {
         return size;
     }
 
