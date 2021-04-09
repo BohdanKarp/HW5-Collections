@@ -28,7 +28,8 @@ public class Stack<T> extends SinglyLinkedList<T>{
     public int size(){
         return size;
     }
+
     public boolean isEmpty() {
-        return size==0;
+        return size == 0;
     }
 }
