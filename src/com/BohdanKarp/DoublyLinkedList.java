@@ -6,14 +6,12 @@ public class DoublyLinkedList<T> {
     public static int size = 0;
 
     protected void addFirst(T element) {
-
+        Node<T> newNode = new Node<>(element);
         if (size == 0) {
-            Node<T> newNode = new Node<>(element);
             newNode.setNext(first);
             first = newNode;
             last = newNode;
         } else {
-            Node<T> newNode = new Node<>(element);
             first.setPrev(newNode);
             newNode.setNext(first);
             first = newNode;
@@ -22,14 +20,12 @@ public class DoublyLinkedList<T> {
     }
 
     protected void addLast(T element) {
-
+        Node<T> newNode = new Node<>(element);
         if (size == 0) {
-            Node<T> newNode = new Node<>(element);
             newNode.setPrev(last);
             last = newNode;
             first = newNode;
         } else {
-            Node<T> newNode = new Node<>(element);
             last.setNext(newNode);
             newNode.setPrev(last);
             last = newNode;
@@ -38,10 +34,9 @@ public class DoublyLinkedList<T> {
     }
 
     protected void add(int index, T element) {
+        Node<T> newNode = new Node<>(element);
         if (index < size) {
-            Node<T> newNode = new Node<>(element);
             Node<T> nodeI = first;
-
             for (int i = 1; i < index; i++) {
                 nodeI = nodeI.getNext();
             }
